@@ -1,0 +1,14 @@
+    <div class="container">
+        <div *ngFor="let post of blogPost">
+            <div class="container relative">
+                <img src="../../../assets/Media/Shop-pic-1-Website-update.png" alt="Background Image" class="w-full h-96 object-cover">
+                <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">{{ post.title }}</h1>
+            </div>
+            <div class="flex justify-center">
+                <div class="container mx-auto px-4 py-8 text-primary w-3/5 ">
+                    <h2 class="text-2xl font-bold mb-4">{{ post.title }}</h2>
+                    <p class="mb-4">{{ post.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>

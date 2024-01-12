@@ -1,0 +1,71 @@
+<div class="container mb-10">
+    <div class="text-primary text-center text-5xl font-bold py-8">
+        <h1>Sales Contacts</h1>
+    </div>
+    <div class="flex flex-col justify-center">
+        <div class=" flex flex-col justify-center mb-4 border-gray-200 dark:border-gray-700 place-items-center">
+            <ul class=" flex flex-wrap  -mb-px text-sm font-medium  text-center " id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                <li class="me-2 mx-10" role="presentation">
+                    <button class="aria-selected:border-primary aria-selected:text-primary aria-selected:hover:text-primary inline-block p-4 border-b-2 rounded-t-lg text-3xl font-semibold" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Regional Managers</button>
+                </li>
+                <li class="me-2 mx-10" role="presentation">
+                    <button class="aria-selected:border-primary aria-selected:text-primary aria-selected:hover:text-primary inline-block p-4 border-b-2 rounded-t-lg text-3xl font-semibold hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Account Managers</button>
+                </li>
+            </ul>
+        </div>
+        <div id="default-tab-content">
+            <div class="hidden px-36  rounded-lg bg-white dark:bg-white" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                
+             
+    
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="table-fixed w-full text-left">
+            <thead class="text-xs text-white uppercase bg-primary dark:bg-primary dark:text-white">
+                <tr>
+                    <th scope="col" class="px-6 py-3">LOCATION</th>
+                    <th scope="col" class="px-6 py-3">NAME</th>
+                    <th scope="col" class="px-6 py-3">PHONE NUMBER</th>
+                </tr>
+            </thead>
+            <tbody class="text-primary">
+                <tr *ngFor="let manager of regionalManagers" 
+                        class="odd:bg-gray-100 even:bg-white border-b dark:border-gray-400">
+                    <th scope="row" class="px-6 py-4 font-medium text-primary whitespace-nowrap dark:text-primary">
+                        {{ manager.location }}
+                    </th>
+                    <td class="px-6 py-4">{{ manager.name }}</td>
+                    <td class="px-6 py-4">{{ manager.phone }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+            </div>
+            <div class="hidden px-36  rounded-lg bg-white dark:bg-white" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="table-fixed w-full text-left">
+            <thead class="text-xs text-white uppercase bg-primary dark:bg-primary dark:text-white">
+                <tr>
+                    <th scope="col" class="px-6 py-3">LOCATION</th>
+                    <th scope="col" class="px-6 py-3">NAME</th>
+                    <th scope="col" class="px-6 py-3">PHONE NUMBER</th>
+                </tr>
+            </thead>
+            <tbody class="text-primary">
+                <tr *ngFor="let manager of accountManagers" 
+                        class="odd:bg-gray-100 even:bg-white border-b dark:border-gray-400">
+                    <th scope="row" class="px-6 py-4 font-medium text-primary whitespace-nowrap dark:text-primary">
+                        {{ manager.location }}
+                    </th>
+                    <td class="px-6 py-4">{{ manager.name }}</td>
+                    <td class="px-6 py-4">{{ manager.phone }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+            </div>
+    </div>
+    </div>
+</div>
+

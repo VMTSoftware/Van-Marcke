@@ -1,0 +1,220 @@
+<div class="container">
+  <div class="flex">
+    <div class="w-1/2 bg-primary text-secondary">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.035181961469!2d-111.83516353368758!3d33.29220277759198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872baa4406cba9e5%3A0xa71cd48ba906f4f6!2sVan%20Marcke%20Plumbing%20Supply!5e0!3m2!1sen!2sus!4v1704731880905!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="bg-primary w-1/2 text-left p-10 leading-8">
+      <h1 class="text-4xl font-bold">{{ storeNames[0] }}</h1>
+      <div class="text-left text-white flex">
+        <div class="relative overflow-x-auto">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-white dark:text-white"
+          >
+            <tbody>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  Phone:
+                </th>
+                <td class="px-6 py-4">
+                  {{ storePhone[0] }}
+                </td>
+              </tr>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  Store Manager:
+                </th>
+                <td class="px-6 py-4">
+                  {{ storeManager[0] }}
+                </td>
+              </tr>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  Address:
+                </th>
+                <td class="px-6 py-4">
+                  {{ storeAddress[0] }}
+                </td>
+              </tr>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  Store Hours:
+                </th>
+                <td class="px-6 py-4">
+                  {{ storeHours[0] }}
+                </td>
+              </tr>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  After Hours:
+                </th>
+                <td class="px-6 py-4">
+                  {{ afterHours[0] }}
+                </td>
+              </tr>
+              <tr class="bg-primary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-semibold text-white whitespace-nowrap dark:text-white"
+                >
+                  Lunch Schedule:
+                </th>
+                <td class="px-6 py-4">
+                  {{ lunchSchedule[0] }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col justify-center">
+    <div class="flex justify-around py-8">
+        <h5
+          class="mb-2 text-5xl font-bold tracking-tight text-primary dark:text-white"
+        >
+          NEARBY STORES
+        </h5>
+      <span class="w-10"></span>
+      <div class=" sm:flex sm:justify-center lg:justify-right">
+        <div class="rounded-md shadow-md w-21">
+            <button href="#"
+                class="hover:bg-primary w-full flex items-center justify-center px-10  border border-transparent text-base font-medium rounded-md text-white bg-tertiary  md:py-4 md:text-lg md:px-4">
+                FIND MORE
+        </button>
+        </div>
+    </div>
+    </div>
+    <div class="flex justify-center pb-8">
+        <a
+        href="#"
+        class="block max-w-sm w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{storeNames[1]}}
+        </h5>
+        <div class="flex justify-between leading-loose">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Address: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose ">
+                {{storeAddress[1]}}
+            </p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Phone: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose">
+                {{storePhone[1]}}
+            </p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Distance: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose">
+                {{storeDistance[1]}} Miles
+            </p>
+        </div>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow-md ">
+                <button href="#"
+                    class="hover:bg-primary w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary  md:py-2 md:text-lg md:px-3">
+                    DIRECTIONS
+            </button>
+            </div>
+        </div>
+      </a>
+      <span class="w-10"></span>
+      <a
+        href="#"
+        class="block max-w-sm w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{storeNames[2]}}
+        </h5>
+        <div class="flex justify-between leading-loose">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Address: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose ">
+                {{storeAddress[2]}}
+            </p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Phone: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose">
+                {{storePhone[2]}}
+            </p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-normal text-primary font-bold dark:text-gray-400 leading-loose">
+                Distance: 
+            </p>
+            <p class="font-normal text-gray-700 pr-10 dark:text-gray-400 leading-loose">
+                {{storeDistance[2]}} Miles
+            </p>
+        </div>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow-md ">
+                <button href="#"
+                    class="hover:bg-primary w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary  md:py-2 md:text-lg md:px-3">
+                    DIRECTIONS
+            </button>
+            </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="text-primary text-left flex flex-col justify-center position-center mx-40">
+    
+        <p>
+            We're located at {{storeAddress[0]}} in Chandler, AZ. Stock up on wholesale plumbing products with ease and convenience. At Van Marcke, you will have a wide range of quality plumbing brands including, Ruud Water Heaters, American Standard, Delta, Moen, Grundfos, Milwaukee, Zoeller, and A.Y. McDonald at a super competitive price. To see all of the brands and products that we carry, check out our <a href="#" class="text-secondary font-semibold">Line Card</a>.
+        </p>
+        <br>
+        <p>
+            You can also enjoy the added value through our shop stock, truck stop, and private label services. These services are designed  to provide the maximum level of convenience and efficiency, allowing your plumbing technicians to spend less time getting the needed supplies for their next job, and more time getting jobs done. You can get additional information about our extraordinary value-added plumbing supply services on our <a href="#" class="text-secondary font-semibold">services</a> page.
+        </p>
+        <br>
+        <p>
+            At Van Marcke Plumbing Supply, you will find some of the best deals on quality plumbing parts, incredible events, and top-notch product training on some of the newest and most popular products in the trade.<a href="#" class="text-secondary font-semibold"> Click here</a> for a list of our upcoming events. Additionally you can sign up to receive current specials, exclusive discounts, giveaways, and event updates via email <a href="#" class="text-secondary font-semibold">here</a>.
+        </p>
+        <br>
+        <p>
+           Everyone here at Van Marcke provides you with a convenient and time saving plumbing supply experience with everything you will need to start your next plumbing job.
+        </p>
+        <br>
+        <a href="#" class="text-secondary font-semibold pb-12">Request a Quote</a>
+   
+  </div>
+</div>

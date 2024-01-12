@@ -1,0 +1,6 @@
+<div class="text-red-900" *ngFor="let item of promoItems">
+    <h2>{{ item.fields.title }}</h2>
+    <p>{{ item.fields.productDescription }}</p>
+    <img src="{{ item.fields.image.fields.file.url }}" alt="{{ item.fields.image.fields.title }}">
+</div>
+
