@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AzPromoServiceService } from '../../Services/az-promo-service.service';
+import { ContentfulServiceService } from 'src/app/Services/contentful-service.service';
 
 @Component({
   selector: 'app-az-promos',
@@ -7,15 +8,21 @@ import { AzPromoServiceService } from '../../Services/az-promo-service.service';
   styleUrls: ['./az-promos.component.scss']
 })
 export class AzPromosComponent implements OnInit {
-  promoItems: any;
+  promoItem: any = {};
+  promoItems: any = [];
 
-  constructor(private azPromoService: AzPromoServiceService) { }
+  constructor(private azPromoService: ContentfulServiceService) { }
 
   ngOnInit(): void {
-    this.azPromoService.getPromoItems().subscribe(data => {
-      console.log(data);  // Log the data
-      this.promoItems = data.items;
+
+    this.azPromoService.getPromoItem('4bUzhyWD6BR2lk19FwOV5h').then(entry => {
+      console.log(entry);
+      this.promoItem = entry.fields;
     });
+    this.azPromoService.getPromoItems('azPromoItems').then(entries => {
+      console.log(entries);  // Log the entries
+      this.promoItems = entries.items.map(item => item.fields);
+    });
+    
   }
-  
 }

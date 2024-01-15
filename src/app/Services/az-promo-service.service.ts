@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { createClient, Entry, EntryCollection } from 'contentful';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AzPromoServiceService {
-  private contentfulUrl = 'https://cdn.contentful.com/spaces/9i6sip6z6ojh/environments/master/entries/4bUzhyWD6BR2lk19FwOV5h?access_token=Ab_ryj5nXeK4sDm7vFon8NLLs5XxyxoeGgcysvZ5cLs';
+  private client = createClient({
+    space: '9i6sip6z6ojh',
+    accessToken: 'Ab_ryj5nXeK4sDm7vFon8NLLs5XxyxoeGgcysvZ5cLs'
+  });
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  getPromoItems(): Observable<any> {
-    return this.http.get<any>(this.contentfulUrl);
+  getPromoItem(entryId: string): Promise<Entry<any>> {
+    return this.client.getEntry(entryId);
+  }
+  getPromoItems(contentTypeId: string): Promise<EntryCollection<any>> {
+    return this.client.getEntries({ content_type: contentTypeId });
   }
 }

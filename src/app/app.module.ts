@@ -46,6 +46,8 @@ import { SpecialsFormComponent } from './Components/specials-form/specials-form.
 import { AzPromosComponent } from './Pages/az-promos/az-promos.component';
 import { NvPromosComponent } from './Pages/nv-promos/nv-promos.component';
 import { TxPromosComponent } from './Pages/tx-promos/tx-promos.component';
+import { AzPromoServiceService } from './Services/az-promo-service.service';
+import { ContentfulServiceService } from './Services/contentful-service.service';
 
 @NgModule({
   declarations: [
@@ -97,8 +99,12 @@ import { TxPromosComponent } from './Pages/tx-promos/tx-promos.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
   ],
-  providers: [],
+  providers: [
+    AzPromoServiceService,
+    ContentfulServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
